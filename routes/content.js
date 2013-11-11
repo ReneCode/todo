@@ -22,7 +22,11 @@ function ContentHandler(db) {
 
 	this.displayNewTaskPage = function(req, res, next) {
 		var task = {name:'', description:'', _id:'', tags:''};
-		return res.render('taskdetail', {title:'Create new Task', task: task});
+		var data = {	title:'Create new Task', 
+						btn_label:'Create', 
+						submit_action:'/newtask',
+						task: task };
+		return res.render('taskdetail', data);
 	}
 
 	this.createNewTask = function(req, res, next) {
@@ -45,8 +49,28 @@ function ContentHandler(db) {
 		dbTask.getTask(id, function(err, result) {
 			if (err) throw err;
 
-			return res.render('taskdetail', {title:'Edit Task', task:result})
+			var data = {	title:'Edit Task', 
+							btn_label:'Update', 
+							submit_action:'/updatetask',
+							task: result };
+			return res.render('taskdetail', data);
 		}) 		
+	}
+
+	this.updateTask = function(req, res, next) {
+		console.log('update task');
+		console.log(JSON.stringify(req.body));
+		var task = { name: req.body.name,
+					 description: req.body.description,
+					 tags: req.body.tags };
+		var id = req.body.id;
+		dbTask.updateTask(id, task, function(err, result) {
+			if (err) throw err;
+
+			res.redirect('/tasks');
+
+		})
+
 	}
 }
 

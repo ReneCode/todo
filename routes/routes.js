@@ -19,6 +19,7 @@ routes = function (app, db)
 	app.get('/newtask', contentHandler.displayNewTaskPage);
 	app.post('/newtask', contentHandler.createNewTask);
 	app.get('/edittask/:id', contentHandler.displayEditTaskPage);
+	app.post('/updatetask', contentHandler.updateTask);
 
 	app.use(ErrorHandler);
 };

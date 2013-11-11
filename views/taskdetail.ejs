@@ -7,14 +7,15 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <form action='newtask' method='POST'>
+    <form action='<%=submit_action%>' method='POST'>
     <h2>Name</h2>
+    <input type="hidden" name="id" value="<%=task._id%>">
     <input type="text" name="name" placeholder="name" value="<%=task.name%>">
     <h2>Description</h2>
     <textarea name="description" cols="80" rows="10" placeholder="description"><%=task.description%></textarea>
     <h2>Tags</h2>
     <input type="text" name="tags" size="80" placeholder="tags, separated by space" value="<%=task.tags%>"><br>
-    <input type="submit" value="Create">
+    <input type="submit" value="<%=btn_label%>">
     </form>
   </body>
 </html>
