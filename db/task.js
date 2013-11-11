@@ -7,7 +7,13 @@ function DbTask(db) {
 
 //	console.log('construct DbTask' + db);
 
-	var colTask = db.collection('task');
+	var colTask = null;
+	if (db) {
+		db.collection('task');
+	}
+	else {
+		console.log("No Db availiable!");
+	}
 
 	this.getTasks = function(callback) {
 		"use strict"

@@ -8,7 +8,8 @@ function ContentHandler(db) {
 	var dbTask = new DbTask(db);
 
 	this.displayRootPage = function(req, res, next) {
-		res.redirect('/tasks');
+//		res.redirect('/tasks');
+		return res.render('index', {title:'Root-Page'});
 	}
 
 	this.displayTaskListPage = function(req, res, next) {
