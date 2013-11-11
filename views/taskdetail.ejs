@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" type="text/css" href="/js/jquery-1.10.2.min.js">
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form action='newtask' method='POST'>
+    <h2>Name</h2>
+    <input type="text" name="name" placeholder="name" value="<%=task.name%>">
+    <h2>Description</h2>
+    <textarea name="description" cols="80" rows="10" placeholder="description"><%=task.description%></textarea>
+    <h2>Tags</h2>
+    <input type="text" name="tags" size="80" placeholder="tags, separated by space" value="<%=task.tags%>"><br>
+    <input type="submit" value="Create">
+    </form>
+  </body>
+</html>

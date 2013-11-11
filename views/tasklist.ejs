@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" type="text/css" href="/js/jquery-1.10.2.min.js">
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <a href="newtask">New Task</a>
+    <h2>Current Tasks</h2>
+    <table>
+    	<tr><th>.</th><th>name</th><th>description</th></tr>
+    	<% for (var i=0; i<task.length;i++) {%>
+    	<tr>
+    	<td><input type="checkbox" ></td>
+    	<td><a href="/edittask/<%=task[i]._id%>"><%=task[i].name%></a></td>
+    	<td><%=task[i].description%></td>
+    	</tr>
+    	<%}%>
+    </table>
+    <form>
+    </form>
+  </body>
+</html>
