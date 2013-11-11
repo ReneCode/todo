@@ -28,7 +28,10 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-MongoClient.connect('mongodb://localhost/todo', function(err, db) {
+
+var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/todo';
+
+MongoClient.connect(mongoUri, function(err, db) {
 	if (err) throw err;
 
 	routes(app, db);
