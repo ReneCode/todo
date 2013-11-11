@@ -36,7 +36,7 @@ function ContentHandler(db) {
 			// redirect to create task
 		} 
 		dbTask.createTask( name, description, tags, function(err, result) {
-			res.redirect('/');
+			res.redirect('/tasks');
 		});
 	}
 

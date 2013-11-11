@@ -9,7 +9,7 @@ function DbTask(db) {
 
 	var colTask = null;
 	if (db) {
-		db.collection('task');
+		colTask = db.collection('task');
 	}
 	else {
 		console.log("No Db availiable!");

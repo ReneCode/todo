@@ -15,7 +15,7 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-//app.use(express.favicon(path.join(__dirname, 'public/images/favicon.ico')));
+app.use(express.favicon(path.join(__dirname, 'public/images/favicon.ico')));
 app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
@@ -31,18 +31,18 @@ if ('development' == app.get('env')) {
 
 console.log("connecting MongoDb");
 var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/todo';
-/*
+
 MongoClient.connect(mongoUri, function(err, db) {
 	if (err) throw err;
 
-console.log("connected to MongoDb");
-*/
-	var db= null;
+	console.log("connected to MongoDb");
+
+//	var db= null;
 	routes(app, db);
 
 	http.createServer(app).listen(app.get('port'), function(){
 	  console.log('Express server listening on port ' + app.get('port'));
 	});
-//});
+});
 
 console.log("app started");
