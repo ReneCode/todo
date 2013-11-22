@@ -6,11 +6,14 @@
 
 var ContentHandler = require('./content');
 var ErrorHandler = require('./error');
+var CommandHandler = require('./command');
+
 
 
 routes = function (app, db) 
 {
 	var contentHandler = new ContentHandler(db);
+	var commandHandler = new CommandHandler(db);
 
 //	console.log('ContentHandler:' + contentHandler);
 
@@ -21,7 +24,11 @@ routes = function (app, db)
 	app.get('/edittask/:id', contentHandler.displayEditTaskPage);
 	app.post('/updatetask', contentHandler.updateTask);
 
+
+	app.get('/command', commandHandler.handleCommand);
+
 	app.use(ErrorHandler);
 };
 
 module.exports = routes;
+

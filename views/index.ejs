@@ -3,12 +3,35 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/javascripts/tool.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    
-    <p>Welcome to EPLAN</p>
-    <a href="/tasks">Tasks</a>
+
+  	<div class="ce_top">
+	    <div class="ce_topmenu">
+	      <ul>
+	      	<li><a href="#" cmd="home">Home</a> </li>
+		    <li><a href="#" cmd="project">Project</a></li>
+		    <li><a href="#" cmd="signup">Sign up</a></li>
+		    <li><a href="#" cmd="login">Login</a></li>
+		  </ul>
+		</div>
+	</div>
+	<div class="ce_left">
+	    <div class="ce_menu">
+	      <ul>
+	      	<li><a href="/tasks">Tasks</a> </li>
+	      	<li><a href="/details">Details</a> </li>
+		  </ul>
+		</div>
+	</div>
+
+	<div class="ce_content">
+		<div id="ce_content">
+		    <h1>dummy content</h1>
+		</div>
+	</div>
 
   </body>
 </html>
