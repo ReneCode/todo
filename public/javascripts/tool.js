@@ -3,28 +3,27 @@
 
 */
 
-var onCmdClick = function() {
-	console.log($(this));
-	var cmd = $(this).attr('cmd');
+var onCmdClick = function(item) {
+	console.log(item);
+	var cmd = $(item).attr('cmd');
 	console.log("clicked on element with cmd:" + cmd);
 	$.get( "/command", { "cmd": cmd } ).done( function(r) {
 		var content = r["content"];
 		document.getElementById("ce_content").innerHTML = content;
-		// jQuery does not work :-( 
-		//$('#ce_content').textContent = r;
-
-		// refresh click-handler
-		$(".ce_cmd").click( onCmdClick );
-
 	} );
-	event.preventDefault();
 }
 
 
 
 $(document).ready( function() {
-//	$("a").click( onCmdClick );
-	$(".ce_cmd").click( onCmdClick );
+	// if doing so, than $(this) in onCmdClick() is set on 
+	// the correct element
+	// but if the element contains onclick="onCmdClick()" than $(this) is not ok
+	// (points to the windows)
+	// solution:
+	// elemement:  onClick="onCmdClick(this)" and get the element as parameter in onCmdClick(element)
+	
+//	$(".ce_cmd").click( onCmdClick );
 });
 
 

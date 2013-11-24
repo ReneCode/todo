@@ -3,20 +3,15 @@ function CommandHandler(db) {
 	"use strict"
 
 	this.handleCommand = function(req, res, next) {
-		console.log(JSON.stringify(req.query));
+//		console.log(JSON.stringify(req.query));
 		var cmd = req.query.cmd;
-		console.log("hallo:" + cmd);
-		if (!cmd) {
-			res.send('Error: "cmd" paramteter missing');
-			return;
-		}
+//		console.log("handleCmd:" + cmd);
 
-		var content = "-- empty --";
+		var content = "Cmd:" + cmd;
 		var menu = "";
-		console.log("hallo");
 		switch (cmd) {
 			case "login":
-				content ='<a href="#" class="ce_cmd" cmd="parts">PartsManagement</a>';
+				content ='<a href="#" class="ce_cmd" onclick="onCmdClick(this)" cmd="parts">PartsManagement</a>';
 				break;
 
 			case "parts":

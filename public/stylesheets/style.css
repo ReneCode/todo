@@ -49,3 +49,10 @@ a {
 	float: right;
 }
 
+.ce_cmd {
+	color: black;
+	background: yellow;
+	border: 1px solid black;
+	padding: 5px;
+}
+

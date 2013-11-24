@@ -9,12 +9,13 @@
   <body>
 
   	<div class="ce_top">
+  		<p onclick="onCmdClick();" cmd="clickme">Click Me!<p>
 	    <div class="ce_topmenu">
 	      <ul>
 	      	<li><a href="#" cmd="home">Home</a> </li>
 		    <li><a href="#" cmd="project">Project</a></li>
-		    <li><a href="#" class="ce_cmd" cmd="signup">Sign up</a></li>
-		    <li><a href="#" class="ce_cmd" cmd="login">Login</a></li>
+		    <li><a href="#" onclick="onCmdClick(this)" class="ce_cmd" cmd="signup">Sign up</a></li>
+		    <li><a href="#" onclick="onCmdClick(this)" class="ce_cmd" cmd="login">Login</a></li>
 		  </ul>
 		</div>
 	</div>
