@@ -16,7 +16,7 @@ a {
 }
 
 .ce_topmenu ul {
-	border: 1px solid blue;
+	border: 1px hidden blue;
 	list-style-type: none;
 	width: 100%;
 	height: 60px;
@@ -24,19 +24,19 @@ a {
 
 .ce_topmenu ul li {
 	float: left;
-	border: 1px solid blue;
+	border: 1px hidden blue;
 	padding: 10px;
 }
 
 .ce_menu ul {
-	border: 1px solid red;
+	border: 1px hidden red;
 	width: 150px;
 	list-style-type: none;
 	padding: 5px;
 } 
 
 .ce_menu ul li {
-	border: 1px dotted red;
+	border: 0px dotted red;
 	padding: 2px;
 }
 

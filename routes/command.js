@@ -16,7 +16,7 @@ function CommandHandler(db) {
 		console.log("hallo");
 		switch (cmd) {
 			case "login":
-				content ='<a href="#" onClick="onCmdClick()" cmd="parts">PartsManagement</a>';
+				content ='<a href="#" class="ce_cmd" cmd="parts">PartsManagement</a>';
 				break;
 
 			case "parts":
