@@ -1,38 +1,28 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <script type="text/javascript" src="/javascripts/tool.js"></script>
-  </head>
-  <body>
+<% include head %>
 
-  	<div class="ce_top">
-  		<p onclick="onCmdClick();" cmd="clickme">Click Me!<p>
-	    <div class="ce_topmenu">
-	      <ul>
-	      	<li><a href="#" cmd="home">Home</a> </li>
-		    <li><a href="#" cmd="project">Project</a></li>
-		    <li><a href="#" onclick="onCmdClick(this)" class="ce_cmd" cmd="signup">Sign up</a></li>
-		    <li><a href="#" onclick="onCmdClick(this)" class="ce_cmd" cmd="login">Login</a></li>
-		  </ul>
-		</div>
+<div class="ce_top">
+    <div class="ce_topmenu">
+      <ul>
+      	<li><a href="#" cmd="home">Home</a> </li>
+	    <li><a href="#" cmd="project">Project</a></li>
+	    <li><a href="#" onclick="onCmdClick(this)" class="ce_cmd" cmd="signup">Sign up</a></li>
+	    <li><a href="#" onclick="onCmdClick(this)" class="ce_cmd" cmd="login">Login</a></li>
+	  </ul>
 	</div>
-	<div class="ce_left">
-	    <div class="ce_menu">
-	      <ul>
-	      	<li><a href="/tasks">Tasks</a> </li>
-	      	<li><a href="/projects">Projects</a> </li>
-		  </ul>
-		</div>
+</div>
+<div class="ce_left">
+    <div class="ce_menu">
+      <ul>
+      	<li><a href="/tasks">Tasks</a> </li>
+      	<li><a href="/projects">Projects</a> </li>
+	  </ul>
 	</div>
+</div>
 
-	<div class="ce_content">
-		<div id="ce_content">
-		    <h1>dummy content</h1>
-		</div>
+<div class="ce_content">
+	<div id="ce_content">
+	    <h1>dummy content</h1>
 	</div>
+</div>
 
-  </body>
-</html>
+<% include foot %>
