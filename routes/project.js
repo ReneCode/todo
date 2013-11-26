@@ -5,7 +5,8 @@ function ProjectHandler() {
 
 
 	this.displayRootPage = function(req, res, next) {
-		res.send("hallo");
+		//res.send("hallo");
+		res.render('project');
 	}
 
 }
