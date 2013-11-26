@@ -6,7 +6,8 @@ function ProjectHandler() {
 
 	this.displayRootPage = function(req, res, next) {
 		//res.send("hallo");
-		res.render('project');
+		var prjs = [ 'hallo', 'test', 'oho', 'aha'];
+		res.render('project', { title:'Projects', projects: prjs } );
 	}
 
 }

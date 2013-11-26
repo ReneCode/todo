@@ -1,0 +1,14 @@
+<% include head %>
+
+
+	<h1>List of Projects</h1>
+	<%= projects %>
+
+	<ul>
+	<% for (var i = 0; i < projects.length; i++) { %>
+	    <p
+	   li><%= projects[i] %></li>
+	<% } %>
+	</ul>
+
+<% include foot %>
