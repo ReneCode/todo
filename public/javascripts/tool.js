@@ -9,7 +9,7 @@ var onCmdClick = function(item) {
 	console.log("clicked on element with cmd:" + cmd);
 	$.get( "/command", { "cmd": cmd } ).done( function(r) {
 		var content = r["content"];
-		document.getElementById("ce_content").innerHTML = content;
+		$('#ce_content').html(content);
 	} );
 }
 
