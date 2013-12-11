@@ -5,6 +5,8 @@
       <ul>
       	<li><a href="#" cmd="home">Home</a> </li>
 	    <li><a href="#" cmd="project">Project</a></li>
+	    <li><a href="#" onclick="onCmdClick(this)" class="ce_cmd" cmd="showdialog">server Dialog</a></li>
+	    <li><a href="#" onclick="onShowDialog(this)" class="ce_cmd" dialog="dialog-a">Dialog</a></li>
 	    <li><a href="#" onclick="onCmdClick(this)" class="ce_cmd" cmd="signup">Sign up</a></li>
 	    <li><a href="#" onclick="onCmdClick(this)" class="ce_cmd" cmd="login">Login</a></li>
 	  </ul>
@@ -24,5 +26,11 @@
 	    <h1>dummy content</h1>
 	</div>
 </div>
+
+<div class="ce_dialog">
+</div>
+
+
+
 
 <% include foot %>
